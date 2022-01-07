@@ -36,6 +36,15 @@ trait CanRun
     public abstract function run(string $name): void;
 }
 
+trait All
+{
+    use SayGoodBye, SayHello, HasName, CanRun {
+        // bisa di override
+        // hello as private;
+        // goodBye as private;
+    }
+}
+
 class ParentPerson
 {
     public function goodBye(?string $name): void
@@ -51,8 +60,7 @@ class ParentPerson
 
 class Person extends ParentPerson
 {
-    use SayGoodBye, SayHello, HasName, CanRun;
-
+    use All;
     public function run(string $name): void
     {
         echo "Person $this->name is running, Hello $name" . PHP_EOL;
