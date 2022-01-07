@@ -2,8 +2,8 @@
 
 class Product
 {
-    private string $name;
-    private int $price;
+    protected string $name; // protected digunakan agar class turunan bisa mengakses property di dalam classs
+    protected int $price;
 
     public function __construct(string $name, int $price)
     {
@@ -20,4 +20,15 @@ class Product
     {
         return $this->price;
     }
+}
+
+class ProductDummy extends Product
+{
+
+    public function info()
+    {
+        echo "Name $this->name" . PHP_EOL;
+        echo "Price $this->price" . PHP_EOL;
+    }
+
 }
