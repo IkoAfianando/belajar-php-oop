@@ -5,10 +5,12 @@ namespace Data\One {
     {
 
     }
+
     class Sample
     {
 
     }
+
     class Dummy
     {
 

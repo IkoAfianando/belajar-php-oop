@@ -1,6 +1,7 @@
 <?php
 
 require_once "data/Manager.php";
+
 $manager = new Manager();
 $manager->name = "Iko";
 $manager->sayHello("Joko");

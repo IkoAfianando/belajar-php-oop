@@ -10,15 +10,15 @@ class Person
 
     function __construct(string $name, ?string $address)
     {
-        $this->name= $name;
+        $this->name = $name;
         $this->address = $address;
     }
 
     function sayHello(?string $name)
     {
-        if(is_null($name)) {
+        if (is_null($name)) {
             echo "Hi, My Name is $this->name" . PHP_EOL;
-        }else {
+        } else {
             echo "Hi, $name My Name is $this->name" . PHP_EOL;
         }
     }

@@ -3,7 +3,7 @@
 namespace Helper;
 function helpMe()
 {
-    echo "HELP ME" .PHP_EOL;
+    echo "HELP ME" . PHP_EOL;
 }
 
 function sayHello(string $name)
