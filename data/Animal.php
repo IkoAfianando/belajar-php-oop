@@ -2,7 +2,7 @@
 
 namespace Data;
 
-abstract class Animal
+abstract class Animal // harus juga abstract
 {
     public string $name;
 
