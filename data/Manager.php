@@ -4,7 +4,16 @@ class Manager
 {
     var string $name;
 
-    function sayHello(string $name)
+    var string $title;
+
+    public function __construct(string $name = "", string $title = "")
+    {
+        $this->name = $name;
+        $this->title = $title;
+    }
+
+
+    function sayHello(string $name) : void
     {
         echo "Hi $name, My Name is Manager $this->name" . PHP_EOL;
     }
@@ -12,9 +21,16 @@ class Manager
 
 class VicePresident extends Manager // child turunan dari Manager
 {
-    function sayHello(string $name)
+
+    public function __construct(string $name = "")
     {
-        echo "Hi $name, My Name is VP $this->name" . PHP_EOL; // dapat di over ridding
+        // tidak wajib tapi direkomendasikan
+        parent::__construct($name, "VP");
+    }
+
+    function sayHello(string $name) : void
+    {
+        echo "Hi $name My Name is VP $this->name" . PHP_EOL; // dapat di over ridding
     }
 }
 
